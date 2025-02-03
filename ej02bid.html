@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 02 bis - Grid, Offset y Ordenación</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .grid-item {
+            text-align: center;
+            padding: 15px;
+            color: white;
+            font-weight: bold;
+        }
+        .bg-green { background-color: green; }  /* Header i Footer */
+        .bg-lightblue { background-color: cyan; } /* Tablet/Mobile section */
+        .bg-blue { background-color: steelblue; } /* Numbered boxes */
+        .bg-orange { background-color: orange; } /* Footer */
+        .bg-gray { background-color: gray; } /* Lower section */
+    </style>
+</head>
+<body class="bg-teal-700 text-white">
+
+    <div class="container my-4">
+        <h2 class="text-center">Ejercicio 02 bis - Grid, Offset y Ordenación</h2>
+        <p class="text-center">Ejemplo de offset, orden y visibilidad en Bootstrap.</p>
+
+        <div class="container bg-light text-dark p-3">
+            <h5 class="text-center">Grid con Offset y Ordenación</h5>
+
+            <!-- Header -->
+            <div class="row">
+                <div class="col-12 bg-green grid-item">Header</div>
+            </div>
+
+            <!-- Números 1-4: en fila per MD+, en dues files per XS/SM -->
+            <div class="row">
+                <div class="col-md-3 col-6 bg-blue grid-item">1</div>
+                <div class="col-md-3 col-6 bg-blue grid-item">2</div>
+                <div class="col-md-3 col-6 bg-blue grid-item">3</div>
+                <div class="col-md-3 col-6 bg-blue grid-item">4</div>
+            </div>
+
+            <!-- Secció Tablet / Mobile -->
+            <div class="row">
+                <div class="col-12 bg-lightblue grid-item">Tablet / Mobile</div>
+            </div>
+
+            <!-- Contingut amb ordre i ajustos corregits -->
+            <div class="row">
+                <div class="col-md-3 col-sm-6 order-md-1 bg-gray grid-item">a</div>
+                <div class="col-md-3 col-sm-6 order-md-2 bg-gray grid-item">b</div>
+                <div class="col-md-3 col-sm-6 order-md-3 bg-gray grid-item">c</div>
+                <div class="col-md-3 col-sm-6 order-md-4 bg-gray grid-item">d</div>
+            </div>
+
+            <!-- Desktop i Footer amb ordre correcte -->
+            <div class="row">
+                <div class="col-md-6 col-12 bg-orange grid-item order-md-2">Desktop</div>
+                <div class="col-md-6 col-12 bg-orange grid-item order-md-1">😃</div>
+            </div>
+
+            <!-- Footer -->
+            <div class="row">
+                <div class="col-12 bg-green grid-item">Footer</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

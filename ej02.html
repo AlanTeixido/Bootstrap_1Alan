@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 02 - Grid Avanzada</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .grid-item {
+            text-align: center;
+            padding: 20px;
+            color: white;
+            font-weight: bold;
+        }
+        .bg-red { background-color: red; }
+        .bg-green { background-color: green; }
+        .bg-pink { background-color: pink; }
+        .bg-orange { background-color: orange; }
+        .bg-blue { background-color: blue; }
+    </style>
+</head>
+<body class="bg-teal-700 text-white">
+
+    <div class="container my-4">
+        <h2 class="text-center">Ejercicio 02 - Uso avanzado de la rejilla</h2>
+        <p class="text-center">Aplicar clases de Bootstrap para que la disposición de los bloques cambie según el tamaño de pantalla.</p>
+
+        <div class="container bg-light text-dark p-3">
+            <h5 class="text-center">Grid Adaptativa</h5>
+            
+            <div class="row">
+                <!-- Bloque superior verd -->
+                <div class="col-12 bg-green grid-item">Superior</div>
+            </div>
+
+            <div class="row">
+                <!-- Extra (Rosa) a dalt en XS i SM -->
+                <div class="col-12 d-block d-md-none bg-pink grid-item">Extra</div>
+
+                <!-- Barra lateral vermella -->
+                <div class="col-md-2 col-sm-12 bg-red grid-item">Lateral</div>
+
+                <!-- Contingut principal -->
+                <div class="col-md-8 col-sm-12">
+                    <div class="row">
+                        <div class="col-md-6 col-12 bg-orange grid-item">Contenido 1</div>
+                        <div class="col-md-6 col-12 bg-orange grid-item">Contenido 2</div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-3 col-6 bg-blue grid-item">A</div>
+                        <div class="col-sm-3 col-6 bg-blue grid-item">B</div>
+                        <div class="col-sm-3 col-6 bg-blue grid-item">C</div>
+                        <div class="col-sm-3 col-6 bg-blue grid-item">D</div>
+                        <div class="col-sm-3 col-6 bg-blue grid-item">E</div>
+                        <div class="col-sm-3 col-6 bg-blue grid-item">F</div>
+                        <div class="col-sm-3 col-6 bg-blue grid-item">G</div>
+                        <div class="col-sm-3 col-6 bg-blue grid-item">H</div>
+                    </div>
+                </div>
+
+                <!-- Extra (Rosa) només en MD+ al lateral -->
+                <div class="col-md-2 d-none d-md-block bg-pink grid-item">Extra</div>
+            </div>
+
+            <div class="row">
+                <!-- Bloque inferior verd -->
+                <div class="col-12 bg-green grid-item">Inferior</div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
